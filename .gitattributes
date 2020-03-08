@@ -1,0 +1,3 @@
+*.sh eol=lf
+**/*.json eol=lf
+**/* eol=lf
