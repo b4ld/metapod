@@ -1,4 +1,8 @@
-# Info-gatherer deployment
+
+
+![Metapod Icon](/_assets/metapodicon.png?raw=true "MetaPod")
+
+# MetaPod
 
 Simple docker based app created to help debug on cloud providers.
 Rest API applications made with node that will help you know what is happening with you environment.
@@ -65,8 +69,8 @@ https://rancher.com/introducing-rancher-metadata-service-for-docker/
 
 ### Using the Application
 
+![Metapod Icon](/_assets/graph_io.png?raw=true "MetaPod")
 
-[DOCKER HUB](https://cloud.docker.com/repository/docker/b4lddocker/metapod)
 
 
 ####  Environment Variables
