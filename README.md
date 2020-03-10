@@ -2,7 +2,9 @@
 
 ![Metapod Icon](/_assets/metapodicon.png?raw=true "MetaPod")
 
-![Graph](/_assets/graphdio.jpg?raw=true "Graph")
+![Graph](/_assets/graphusage.jpg?raw=true "Graph")
+
+
 # MetaPod
 
 Simple docker based app created to help debug on cloud providers.
