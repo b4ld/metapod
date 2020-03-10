@@ -2,7 +2,6 @@
 
 ![Metapod Icon](/_assets/metapodicon.png?raw=true "MetaPod")
 
-![Graph](/_assets/graph.svg?raw=true "Graph")
 
 
 # MetaPod
@@ -73,6 +72,7 @@ https://rancher.com/introducing-rancher-metadata-service-for-docker/
 ### The Application
 
 
+![Graph](/_assets/graphdiocp.jpg?raw=true "Graphic")
 
 
 
