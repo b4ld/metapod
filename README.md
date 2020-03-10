@@ -69,7 +69,7 @@ https://rancher.com/introducing-rancher-metadata-service-for-docker/
 
 ### Using the Application
 
-![Metapod Icon](/_assets/graph_io.png?raw=true "MetaPod")
+![Metapod Icon](/_assets/graph_snip.PNG?raw=true "MetaPod")
 
 
 
