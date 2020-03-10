@@ -2,7 +2,7 @@
 
 ![Metapod Icon](/_assets/metapodicon.png?raw=true "MetaPod")
 
-![Graph](/_assets/graphusage.jpg?raw=true "Graph")
+![Graph](/_assets/graph.svg?raw=true "Graph")
 
 
 # MetaPod
