@@ -73,7 +73,7 @@ https://rancher.com/introducing-rancher-metadata-service-for-docker/
 
 
 
-![Graph](/_assets/graphdiocp.jpg?raw=true "Graphic")
+![Graph](/_assets/g.jpg?raw=true "Graphic")
 
 
 
