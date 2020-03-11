@@ -70,6 +70,19 @@ https://rancher.com/introducing-rancher-metadata-service-for-docker/
 
 
 ####  Environment Variables
+![Status](https://img.shields.io/badge/Status-InProgress-yellow)
+```
+SERVER_PORT
+```
+number
+#Server where api ae running (If you change this, dont forget to change "containerPort" and "targetPort" to the same port).
+
+```
+EXPOSE_APP 
+```
+boolean
+#Change th Service from NodePort to LoadBalancer, together with a public subnet you will be abble to expose the application via loadbalancer.
+
 
 SERVER_PORT (default 4499)
 etc
