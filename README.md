@@ -1,7 +1,11 @@
-# Info-gatherer deployment
+
+
+![Metapod Icon](/_assets/metapodicon.png?raw=true "MetaPod")
+
+# MetaPod
 
 Simple docker based app created to help debug on cloud providers.
-Rest API applications made with node that will help you know what is happening with you environment.
+Rest API applications made with node that will help you know what is happening with your environment.
 
 ## Getting Started
 
@@ -17,10 +21,12 @@ Supports:
 
 
 ###Docker containers lister:
-- by name
+- by container name
 
 
-###Cloud Provider Metadata based on Link-local:[LINK-LOCAL](https://en.wikipedia.org/wiki/Link-local_address)
+###Cloud Provider Metadata based on Link-local:
+[LINK-LOCAL](https://en.wikipedia.org/wiki/Link-local_address)
+
 - Node Hostname
 - public/local Ip
 - Credential Exposure checker
@@ -63,27 +69,38 @@ https://rancher.com/introducing-rancher-metadata-service-for-docker/
 
 
 
-### Using the Application
+### The Application
 
+![Graph](/_assets/g.jpg?raw=true "Graphic")
 
-[DOCKER HUB](https://cloud.docker.com/repository/docker/b4lddocker/metapod)
 
 
 ####  Environment Variables
+![Status](https://img.shields.io/badge/Status-InProgress-yellow)
+```
+SERVER_PORT
+```
+number
+#Server where api ae running (If you change this, dont forget to change "containerPort" and "targetPort" to the same port).
 
-SERVER_PORT (default 4499)
-etc
+```
+EXPOSE_APP 
+```
+boolean
+#Change th Service from NodePort to LoadBalancer, together with a public subnet you will be abble to expose the application vi loadbalancer.
+
+
 
 ####  Kubernetes
 
-You can pull it and use it on your deployment.yaml.
+You can pull it and use it on your deployment.yaml
 
 ```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: metapod
-  # namespace: metapod
+  # namespace: metapod 
 spec:
   replicas: 1
   selector:
@@ -100,11 +117,14 @@ spec:
         command: ["npm","run","metapod"]
         imagePullPolicy: Always
         ports:
-          - containerPort: 4499 #Container/Application
+          - containerPort: 4499 #Container/Application 
             name: http
         volumeMounts:
           - name: dockersock
             mountPath: /var/run/docker.sock
+        env:  #Environment Veriables
+            - name: SERVER_PORT
+              value: 4499
       volumes:
          - name: dockersock
            hostPath:
@@ -125,8 +145,6 @@ spec:
   - name: http
     port: 4499 #Same the Ingress/Loadbalancer
     targetPort: 4499 #Bind to container/Application
-
-
 
 
 ```
@@ -159,11 +177,6 @@ docker run -d --name metapod -p 4499:4499 -v //var/run/docker.sock:/var/run/dock
 Open source project ready for contibution.
 
 ## Docker Images Versioning
-
-
-**Release 1.1.0** 
-![Version](https://img.shields.io/badge/Version-V1.x-blue) 
-![Maintenance](https://img.shields.io/badge/Maintenance-false-yellow)
 
 
 ------
