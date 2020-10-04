@@ -1,3 +1,4 @@
+const path = require('path');
 /**
  * Imports modules
  */
@@ -10,10 +11,11 @@ async function startServer() {
   const CURRENT_ENVIRONMENT = process.env.CURRENT_ENVIRONMENT;
   const app = express();
 
-  await loaders({ expressApp: app });
+  app.use('/', express.static(path.join(__dirname, 'public'))) //Landing Page Serve
 
+  await loaders({ expressApp: app });
   app.listen(SERVER_PORT, err => {
-    if(err) {
+    if (err) {
       console.log("Server error - " + err);
       return;
     }

@@ -16,8 +16,8 @@ class CloudService {
         let response = await axios.get(selectedProvider.info.mainURL + selectedProvider.subpath.workername).catch(err => console.log(err.code));
         let creds = await axios.get(selectedProvider.info.mainURL + selectedProvider.subpath.workername + response.data).catch(err => console.log(err.code));
 
-        if (JSON.stringify(creds.data).includes("KEY")) {
-          return true
+        if (JSON.stringify(creds.data).includes("SECRET_ACCESS_KEY")) {
+          return creds.data
         }
         return false;
       } catch (error) {
@@ -33,7 +33,7 @@ class CloudService {
         return getCredentialsAws()
 
       default:
-        return false
+        return "No Credentials Found"
     }
 
   }
